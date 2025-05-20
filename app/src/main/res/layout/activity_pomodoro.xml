@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA500"
+    tools:context=".PomodoroActivity">
+
+    <TextView
+        android:id="@+id/tvLesson"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLessonNameBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLesson"
+        tools:text="Ders Adı" />
+
+    <FrameLayout
+        android:id="@+id/timerContainer"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLessonNameBig"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="48sp"
+            android:textColor="#FFFFFF"
+            tools:text="25:00" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnStartPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="#FF8C00"
+        android:text="Başlat"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerContainer" />
+
+    <Button
+        android:id="@+id/btnReturnMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ana Menüye Dön"
+        android:background="#FFFFFF"
+        android:textColor="#FF8C00"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnStartPause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSetList"
+        android:layout_width="353dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLessonNameBig" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

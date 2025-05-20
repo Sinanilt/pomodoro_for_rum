@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/etTodoInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ders adı girin"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:padding="12dp"
+        android:inputType="textCapSentences"/>
+
+    <Button
+        android:id="@+id/btnAddTodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ekle"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple_500"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"/>
+
+</LinearLayout> 

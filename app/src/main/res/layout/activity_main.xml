@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFA500"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="71dp" />
+
+    <EditText
+        android:id="@+id/etLesson"
+        android:hint="Ders Adı"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!-- Pomodoro Süresi -->
+    <TextView
+        android:id="@+id/tvPomodoroLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pomodoro Süresi"
+        android:textColor="#222"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/etLesson"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <NumberPicker
+        android:id="@+id/npPomodoroDuration"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/numberpicker_bg"
+        app:layout_constraintTop_toBottomOf="@id/tvPomodoroLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Pomodoro Hint -->
+    <TextView
+        android:id="@+id/tvPomodoroHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pomodoro süresi seçiniz"
+        android:textColor="#B00020"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/npPomodoroDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Kısa Mola Süresi -->
+    <TextView
+        android:id="@+id/tvShortBreakLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kısa Mola Süresi"
+        android:textColor="#222"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPomodoroHint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <NumberPicker
+        android:id="@+id/npShortBreak"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/numberpicker_bg"
+        app:layout_constraintTop_toBottomOf="@id/tvShortBreakLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Short Break Hint -->
+    <TextView
+        android:id="@+id/tvShortBreakHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kısa mola süresi seçiniz"
+        android:textColor="#B00020"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/npShortBreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Kaç Set -->
+    <TextView
+        android:id="@+id/tvSetCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kaç Set"
+        android:textColor="#222"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvShortBreakHint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <NumberPicker
+        android:id="@+id/npSetCount"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/numberpicker_bg"
+        app:layout_constraintTop_toBottomOf="@id/tvSetCountLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Set Count Hint -->
+    <TextView
+        android:id="@+id/tvSetCountHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set sayısı seçiniz"
+        android:textColor="#B00020"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/npSetCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Uzun Mola Süresi -->
+    <TextView
+        android:id="@+id/tvLongBreakLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uzun Mola Süresi"
+        android:textColor="#222"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSetCountHint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"/>
+
+    <NumberPicker
+        android:id="@+id/npLongBreak"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/numberpicker_bg"
+        app:layout_constraintTop_toBottomOf="@id/tvLongBreakLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <!-- Long Break Hint -->
+    <TextView
+        android:id="@+id/tvLongBreakHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uzun mola süresi seçiniz"
+        android:textColor="#B00020"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/npLongBreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:text="Başla"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#FF8C00"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvLongBreakHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_baseline_bar_chart_24"
+        app:backgroundTint="@android:color/white"
+        app:tint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@android:color/white"
+        app:tint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
